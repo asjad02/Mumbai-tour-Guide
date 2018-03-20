@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "259609463255",
+    "firebase_url": "https://fir-ui-demo-7084f.firebaseio.com",
+    "project_id": "fir-ui-demo-7084f",
+    "storage_bucket": "fir-ui-demo-7084f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:259609463255:android:955859d3aabbe418",
+        "android_client_info": {
+          "package_name": "com.bootcamp.mumbaitourguide"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "259609463255-a3ptlk7vfcot466h61sa8cfkim7lsf95.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bootcamp.mumbaitourguide",
+            "certificate_hash": "aef7560e4dc1c8942c1cb9618cc663bc3606627e"
+          }
+        },
+        {
+          "client_id": "259609463255-2nb8jvpm5cdt3d2g8k19fq1eemc28pbr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKkgrcYQu-cVBJ58HXBaaRia3P_jlhxaw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "259609463255-2nb8jvpm5cdt3d2g8k19fq1eemc28pbr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
