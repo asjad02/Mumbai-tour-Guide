@@ -1,24 +1,13 @@
 package com.bootcamp.mumbaitourguide;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.firebase.ui.auth.AuthUI;
-import com.google.firebase.auth.FirebaseAuth;
-
-import java.lang.reflect.Array;
-import java.util.Arrays;
-
 public class MainActivity extends AppCompatActivity {
-
-    private  static final int RC_SIGN_IN = 123;
-    private FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,22 +15,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        auth = FirebaseAuth.getInstance();
-
-//        CHECKING LOGIN STATUS
-        if (auth.getCurrentUser() != null) {
-//            user logged in
-
-        } else {
-//            user not loged in
-            startActivityForResult(AuthUI.getInstance()
-                .createSignInIntentBuilder()
-                .setAvailableProviders(Arrays.asList(
-                        new AuthUI.IdpConfig.EmailBuilder().build(),
-                        new AuthUI.IdpConfig.GoogleBuilder().build()))
-                .build(),
-            RC_SIGN_IN);
-        }
         //OnClickListener Object for Architecture
         View.OnClickListener architectureListener = new View.OnClickListener() {
             @Override
@@ -137,17 +110,5 @@ public class MainActivity extends AppCompatActivity {
 
         //Set the click listener on that view
         eventsTextView.setOnClickListener(eventsListener);
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == RC_SIGN_IN) {
-            if (resultCode == RESULT_OK) {
-                Log.d("AUTH", auth.getCurrentUser().getEmail());
-            } else {
-                Log.d("AUTH", "NOT AUTHENTICATED");
-            }
-        }
     }
 }
